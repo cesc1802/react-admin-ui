@@ -1,7 +1,12 @@
-import React from "react"
+import React, {Component} from "react"
 import DrawerComponent from "./drawer.component";
 
-const DrawerModule = ({open, handleDrawerClose, children}) => {
+type Props = {
+    open: Boolean,
+    handleDrawerClose: Function,
+    children: Component
+}
+const DrawerModule = ({open, handleDrawerClose, children}: Props) => {
     return (
         <DrawerComponent open={open} handleDrawerClose={handleDrawerClose}>{children}</DrawerComponent>
     )
